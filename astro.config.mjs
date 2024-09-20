@@ -7,7 +7,14 @@ export default defineConfig({
     plugins: [tailwindcss()],
     base: "./", // Esto hará que las rutas de los assets sean relativas
     build: {
-      outDir: "./", // O el directorio adecuado que cPanel esté sirviendo
+      assetsDir: "./_astro", // Asegurarte de que las rutas de los assets sean relativas
+      rollupOptions: {
+        output: {
+          entryFileNames: "_astro/[name].js",
+          chunkFileNames: "_astro/[name].js",
+          assetFileNames: "_astro/[name].[ext]",
+        },
+      },
     },
   },
   // Add your domain name here

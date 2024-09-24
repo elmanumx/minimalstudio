@@ -5,9 +5,9 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
-    base: "./", // Para asegurar que no haya un '/' inicial
+    base: "./demos/astrobuild/", // Para asegurar que no haya un '/' inicial
     build: {
-      assetsDir: "_astro", // Indica el directorio de assets sin un prefijo absoluto
+      assetsDir: "./demos/astrobuild/", // Rutas de assets relativas con './'
     },
   },
   // Add your domain name here

@@ -5,14 +5,14 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
-    base: "", // Para asegurar que no haya un '/' inicial
+    base: "./", // Para asegurar que no haya un '/' inicial
     build: {
-      assetsDir: "_astro", // Indica el directorio de assets sin un prefijo absoluto
+      assetsDir: "./_astro", // Indica el directorio de assets sin un prefijo absoluto
       rollupOptions: {
         output: {
-          entryFileNames: "_astro/[name].js",
-          chunkFileNames: "_astro/[name].js",
-          assetFileNames: "_astro/[name].[ext]",
+          entryFileNames: "./_astro/[name].js",
+          chunkFileNames: "./_astro/[name].js",
+          assetFileNames: "./_astro/[name].[ext]",
         },
       },
     },

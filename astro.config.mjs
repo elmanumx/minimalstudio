@@ -5,9 +5,9 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
-    base: "./", // Aquí indica el subdirectorio
+    base: "/", // Aquí indica el subdirectorio
   },
   // Add your domain name here
-  site: "https://lexingtonthttps://elmanumx.com/demos/astrobuild/",
+  site: "https://elmanumx.com/demos/astrobuild/",
   integrations: [sitemap()],
 });

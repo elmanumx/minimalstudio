@@ -7,14 +7,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
     base: "./", // Para asegurar que no haya un '/' inicial
     build: {
-      assetsDir: "./_astro", // Indica el directorio de assets sin un prefijo absoluto
-      rollupOptions: {
-        output: {
-          entryFileNames: "./_astro/[name].js",
-          chunkFileNames: "./_astro/[name].js",
-          assetFileNames: "./_astro/[name].[ext]",
-        },
-      },
+      assetsDir: "_astro", // Indica el directorio de assets sin un prefijo absoluto
     },
   },
   // Add your domain name here

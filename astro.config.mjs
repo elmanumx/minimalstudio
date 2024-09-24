@@ -5,7 +5,17 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
-    base: "./test/../", // Esto hará que las rutas de los assets sean relativas
+    base: "", // Para asegurar que no haya un '/' inicial
+    build: {
+      assetsDir: "_astro", // Indica el directorio de assets sin un prefijo absoluto
+      rollupOptions: {
+        output: {
+          entryFileNames: "_astro/[name].js",
+          chunkFileNames: "_astro/[name].js",
+          assetFileNames: "_astro/[name].[ext]",
+        },
+      },
+    },
   },
   // Add your domain name here
   site: "https://lexingtonthemes.com/",
